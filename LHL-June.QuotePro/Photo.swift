@@ -8,12 +8,31 @@
 
 import UIKit
 
-class Photo: NSObject {
+struct Photo  {
 
-//    var nameOfPhoto: String
-//    
-//    init(nameOfPhoto: String, photo: UIImage) {
-//        self.nameOfPhoto = nameOfPhoto
-//        self.photo = photo
+    var image: UIImage
+    
+//    func getImage(image :UIImage) {
+//        
+//        let urlSession = NSURLSession.sharedSession()
+//        let imageURL = NSURL(string: "https://unsplash.it/list")!
+//        let request = NSURLRequest(URL: imageURL)
+//        
+//        
+//        let dataTask: NSURLSessionTask = urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+//            
+//            let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [String: String]
+//            
+//            print(json)
+//            
+//           let URLstr = json["post_url"]
+//            
+//
+//            
+//
+//        })
+//        
+//        dataTask.resume()
 //    }
+    
 }

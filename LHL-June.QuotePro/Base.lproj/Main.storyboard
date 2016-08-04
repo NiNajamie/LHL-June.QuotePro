@@ -26,6 +26,9 @@
                                 <state key="normal" title="Get Random Quote">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="getQuotePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgo-ms-30o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-Gb-dto">
                                 <rect key="frame" x="137" y="506" width="46" height="30"/>
@@ -47,6 +50,22 @@
                                     <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxL-5a-04d">
+                                <rect key="frame" x="115" y="392" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjM-kA-z0f">
+                                <rect key="frame" x="122" y="363" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="PNK-AI-9Zo"/>
+                                    <constraint firstAttribute="height" constant="21" id="oeA-dS-lQj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -54,11 +73,19 @@
                             <constraint firstItem="jmY-Gb-dto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6F3-Wc-7q6"/>
                             <constraint firstItem="jmY-Gb-dto" firstAttribute="top" secondItem="hwh-Bi-pGq" secondAttribute="bottom" constant="15" id="Boo-gm-NAE"/>
                             <constraint firstItem="hwh-Bi-pGq" firstAttribute="top" secondItem="gJF-hc-cFG" secondAttribute="bottom" constant="8" id="HJg-Fy-HHr"/>
+                            <constraint firstItem="dxL-5a-04d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Twx-dj-ywK"/>
                             <constraint firstItem="gJF-hc-cFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2q-Z2-m7Y"/>
                             <constraint firstItem="gJF-hc-cFG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="359" id="hJl-wE-I38"/>
+                            <constraint firstItem="sjM-kA-z0f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iH7-9X-m7c"/>
+                            <constraint firstItem="dxL-5a-04d" firstAttribute="top" secondItem="sjM-kA-z0f" secondAttribute="bottom" constant="8" id="o2h-OR-R91"/>
+                            <constraint firstItem="gJF-hc-cFG" firstAttribute="top" secondItem="dxL-5a-04d" secondAttribute="bottom" constant="10" id="qck-BG-AYf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Quote Builder" id="nnn-CW-mhY"/>
+                    <connections>
+                        <outlet property="quoteNameLabel" destination="dxL-5a-04d" id="Rlc-wN-1TO"/>
+                        <outlet property="quoteTextLabel" destination="sjM-kA-z0f" id="SKv-8q-2Nx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,11 +10,14 @@ import UIKit
 
 class QuoteBuilderViewController: UIViewController {
 
+    @IBAction func getQuotePressed(sender: UIButton) {
+        Quote.getQuote("")
+    }
+    
+    // MARK: - View Controller Life Cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-    
+        
     }
 
     override func didReceiveMemoryWarning() {
