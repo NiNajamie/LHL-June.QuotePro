@@ -10,11 +10,10 @@ import UIKit
 
 class Photo: NSObject {
 
-    var nameOfPhoto: String
-    var photo: UIImage
-    
-    init(nameOfPhoto: String, photo: UIImage) {
-        self.nameOfPhoto = nameOfPhoto
-        self.photo = photo
-    }
+//    var nameOfPhoto: String
+//    
+//    init(nameOfPhoto: String, photo: UIImage) {
+//        self.nameOfPhoto = nameOfPhoto
+//        self.photo = photo
+//    }
 }

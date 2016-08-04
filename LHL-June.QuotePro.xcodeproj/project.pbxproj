@@ -13,6 +13,10 @@
 		96C07DF71D5271FC00F3C91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C07DF51D5271FC00F3C91C /* LaunchScreen.storyboard */; };
 		96C07DFF1D52734600F3C91C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C07DFE1D52734600F3C91C /* Quote.swift */; };
 		96C07E051D527AE300F3C91C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C07E041D527AE300F3C91C /* Photo.swift */; };
+		96C07E071D52830500F3C91C /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C07E061D52830500F3C91C /* HomeTableViewController.swift */; };
+		96C07E141D52B96800F3C91C /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C07E131D52B96800F3C91C /* QuoteView.swift */; };
+		96C07E161D52BA5C00F3C91C /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C07E151D52BA5C00F3C91C /* QuoteView.xib */; };
+		96C07E181D52C49100F3C91C /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C07E171D52C49100F3C91C /* QuoteBuilderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		96C07DF81D5271FC00F3C91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C07DFE1D52734600F3C91C /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		96C07E041D527AE300F3C91C /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		96C07E061D52830500F3C91C /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		96C07E131D52B96800F3C91C /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		96C07E151D52BA5C00F3C91C /* QuoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
+		96C07E171D52C49100F3C91C /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 				96C07DEC1D5271FC00F3C91C /* AppDelegate.swift */,
 				96C07E041D527AE300F3C91C /* Photo.swift */,
 				96C07DFE1D52734600F3C91C /* Quote.swift */,
+				96C07E131D52B96800F3C91C /* QuoteView.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -77,6 +86,7 @@
 		96C07E011D52736E00F3C91C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96C07E151D52BA5C00F3C91C /* QuoteView.xib */,
 				96C07DF01D5271FC00F3C91C /* Main.storyboard */,
 				96C07DF51D5271FC00F3C91C /* LaunchScreen.storyboard */,
 			);
@@ -86,6 +96,8 @@
 		96C07E021D52737600F3C91C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				96C07E171D52C49100F3C91C /* QuoteBuilderViewController.swift */,
+				96C07E061D52830500F3C91C /* HomeTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 				96C07DF71D5271FC00F3C91C /* LaunchScreen.storyboard in Resources */,
 				96C07DF41D5271FC00F3C91C /* Assets.xcassets in Resources */,
 				96C07DF21D5271FC00F3C91C /* Main.storyboard in Resources */,
+				96C07E161D52BA5C00F3C91C /* QuoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C07E071D52830500F3C91C /* HomeTableViewController.swift in Sources */,
+				96C07E141D52B96800F3C91C /* QuoteView.swift in Sources */,
 				96C07E051D527AE300F3C91C /* Photo.swift in Sources */,
 				96C07DFF1D52734600F3C91C /* Quote.swift in Sources */,
+				96C07E181D52C49100F3C91C /* QuoteBuilderViewController.swift in Sources */,
 				96C07DED1D5271FC00F3C91C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +339,7 @@
 				96C07DFD1D5271FC00F3C91C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -3,13 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quote Builder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LHL_June_QuotePro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuoteBuilderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,17 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJF-hc-cFG">
+                                <rect key="frame" x="95" y="423" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="5qN-PK-3bt"/>
+                                    <constraint firstAttribute="height" constant="30" id="nzj-hp-SWD"/>
+                                </constraints>
+                                <state key="normal" title="Get Random Quote">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-Gb-dto">
+                                <rect key="frame" x="137" y="506" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="5Na-7c-le3"/>
+                                    <constraint firstAttribute="height" constant="30" id="bDG-xm-Eey"/>
+                                </constraints>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-Bi-pGq">
+                                <rect key="frame" x="95" y="461" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="J4u-Or-mC3"/>
+                                    <constraint firstAttribute="width" constant="131" id="OIs-Yu-IVG"/>
+                                </constraints>
+                                <state key="normal" title="Get Random Image">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hwh-Bi-pGq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Pf-rL-dje"/>
+                            <constraint firstItem="jmY-Gb-dto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6F3-Wc-7q6"/>
+                            <constraint firstItem="jmY-Gb-dto" firstAttribute="top" secondItem="hwh-Bi-pGq" secondAttribute="bottom" constant="15" id="Boo-gm-NAE"/>
+                            <constraint firstItem="hwh-Bi-pGq" firstAttribute="top" secondItem="gJF-hc-cFG" secondAttribute="bottom" constant="8" id="HJg-Fy-HHr"/>
+                            <constraint firstItem="gJF-hc-cFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2q-Z2-m7Y"/>
+                            <constraint firstItem="gJF-hc-cFG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="359" id="hJl-wE-I38"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Quote Builder" id="nnn-CW-mhY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1099" y="296"/>
+            <point key="canvasLocation" x="1114" y="296"/>
         </scene>
         <!--Home-->
         <scene sceneID="eLR-2T-rvd">
             <objects>
-                <tableViewController id="dq0-4R-y8b" sceneMemberID="viewController">
+                <tableViewController id="dq0-4R-y8b" customClass="HomeTableViewController" customModule="LHL_June_QuotePro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="i8N-hc-NbS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,27 +80,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHm-Iu-PDQ">
-                                            <rect key="frame" x="8" y="22" width="220" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZj-PL-JSA">
-                                            <rect key="frame" x="8" y="0.0" width="172" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mJ-Nd-Nbs" customClass="QuoteView" customModule="LHL_June_QuotePro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="320" id="RPt-mE-mdk"/>
+                                                <constraint firstAttribute="height" constant="43.5" id="vME-4Y-7Hx"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="TZj-PL-JSA" secondAttribute="trailing" constant="132" id="8bZ-1V-UNf"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="wHm-Iu-PDQ" secondAttribute="bottom" constant="-7.5" id="Ksw-42-GH0"/>
-                                        <constraint firstItem="TZj-PL-JSA" firstAttribute="leading" secondItem="3xf-MN-WJD" secondAttribute="leadingMargin" id="Vhs-Nn-OvN"/>
-                                        <constraint firstItem="wHm-Iu-PDQ" firstAttribute="leading" secondItem="3xf-MN-WJD" secondAttribute="leadingMargin" id="aVZ-MQ-jWZ"/>
-                                        <constraint firstItem="wHm-Iu-PDQ" firstAttribute="top" secondItem="TZj-PL-JSA" secondAttribute="bottom" constant="1" id="kCM-rI-a2x"/>
-                                        <constraint firstItem="TZj-PL-JSA" firstAttribute="top" secondItem="3xf-MN-WJD" secondAttribute="topMargin" constant="-8" id="ktP-z8-tAr"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="wHm-Iu-PDQ" secondAttribute="trailing" constant="84" id="qbX-J9-vVA"/>
+                                        <constraint firstItem="4mJ-Nd-Nbs" firstAttribute="leading" secondItem="3xf-MN-WJD" secondAttribute="leading" id="1zd-8P-tlQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="4mJ-Nd-Nbs" secondAttribute="trailing" id="mXu-5u-Ly7"/>
+                                        <constraint firstAttribute="bottom" secondItem="4mJ-Nd-Nbs" secondAttribute="bottom" id="vdA-R9-1gg"/>
+                                        <constraint firstItem="4mJ-Nd-Nbs" firstAttribute="top" secondItem="3xf-MN-WJD" secondAttribute="top" id="wCH-DF-uL1"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -71,12 +104,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="ndF-27-D2j">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="b4q-SR-rr7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="b4q-SR-rr7">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="dq0-4R-y8b" id="i4A-Id-KP8"/>
+                                <segue destination="BYZ-38-t0r" kind="push" identifier="addQuote" id="IkF-f8-Rb9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wF-Mj-TDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="296"/>
+            <point key="canvasLocation" x="725" y="296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eiw-zl-knh">
