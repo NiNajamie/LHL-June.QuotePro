@@ -21,16 +21,8 @@ class QuoteBuilderViewController: UIViewController {
     
     
     
-//    @IBOutlet weak var quoteTextLabel: UILabel!
-//    @IBOutlet weak var nameLabel: UILabel!
-//    @IBOutlet weak var imageView: UIImageView!
-    
-//    let quote = Quote()
-
     // MARK: - Action
     @IBAction func getQuotePressed(sender: UIButton) {
-//        quoteTextLabel.text = "TEXT!!"
-//        quoteNameLabel.text = "Name!!"
         quote.getQuote()
     }
     
@@ -41,10 +33,11 @@ class QuoteBuilderViewController: UIViewController {
         let quoteText = json["quoteText"]
         if let quoteAuthor = quoteAuthor, let quoteText = quoteText
         {
-            print("NAME:\(quoteAuthor)")
-            print("TEXT: \(quoteText)")
+//            print("NAME:\(quoteAuthor)")
+//            print("TEXT: \(quoteText)")
             
             
+            // Data comes back from diff thread and update labels
             dispatch_async(dispatch_get_main_queue()) {
                 self.quoteNameLabel.text = quoteAuthor
                 self.quoteTextLabel.text = quoteText
@@ -59,13 +52,6 @@ class QuoteBuilderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let labelFrame = CGRect(x: 20, y: 100, width: 100, height: 50)
-//        testLabel.frame = labelFrame
-//        testLabel.backgroundColor = UIColor.orangeColor()
-//        testLabel.textColor = UIColor.brownColor()
-//        self.testLabel.text = "What's up?"
-//        
-//        view.addSubview(testLabel)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(setQuoteLabels), name: "setQuoteLabels", object: nil)
         self.quoteTextLabel.text = "TEXT"
