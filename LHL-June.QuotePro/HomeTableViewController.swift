@@ -13,14 +13,13 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Quote.getQuote("")
+//        Quote.getQuote("")
     }
 
     @IBAction func addButtonPressed(sender: UIBarButtonItem) {
         
-        print("Adding Quote!")
-        performSegueWithIdentifier("addQuote", sender: QuoteBuilderViewController.self)
-        
+        // sender: me
+        performSegueWithIdentifier("addQuote", sender: self)
     }
 
     // MARK: - Table view data source

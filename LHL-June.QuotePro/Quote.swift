@@ -8,16 +8,15 @@
 
 import UIKit
 
-struct Quote  {
+class Quote {
     
-    var nameOfAut: String
-    var detail: String
-    
-//    var photo: UIImage
-    
+    var json = [String: String]()
+//    var testString = ""
+
     // This guy is requesting to Server
-    static func getQuote(quote: String) {
+    func getQuote() {
         
+        // Setup the session to make REST GET call.  Notice the URL is https NOT http!!
         // 1. Access the URL
         let urlSession = NSURLSession.sharedSession()
         let quoteURL = NSURL(string: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")!
@@ -26,25 +25,29 @@ struct Quote  {
         // 3. Automatically back to Main Thread // JSON only lives within the block(closure)
         let dataTask: NSURLSessionTask = urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
             
-            let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [String: String]
-            
-            print(json)
-            
-            let quoteAuthor = json["quoteAuthor"]
-            let quoteText = json["quoteText"]
-            
-            if let name = quoteAuthor, let text = quoteText {
-                let quote1 = Quote(nameOfAut: name, detail: text)
-                
-                print(quote1.nameOfAut)
-                print(quote1.detail)
+            if let data = data
+            {
+                if error == nil
+                {
+                    print(response)
+                    self.json = try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String : String]
+                    NSNotificationCenter.defaultCenter().postNotificationName("setQuoteLabels", object: self, userInfo: self.json)
+//                    print(self.json["quoteAuthor"]!)
+//                    print(self.json["quoteText"]!)
+
+                }
+                else
+                {
+                    print("OMG, there is error!")
+                }
             }
+            
         })
-        
         // 2. Resume(Back to above)
         dataTask.resume()
     }
     
+
 //        var dataTask: NSURLSessionTask = urlSession.dataTaskWithURL(quoteURL!) { (data: NSData?, responce: NSURLResponse?, error: NSError?) in
 //        }
         

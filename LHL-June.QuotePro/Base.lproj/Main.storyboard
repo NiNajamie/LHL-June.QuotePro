@@ -8,7 +8,7 @@
         <!--Quote Builder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="QuoteBuilderViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuoteBuilderViewController" customModule="LHL_June_QuotePro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,74 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJF-hc-cFG">
-                                <rect key="frame" x="95" y="423" width="131" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qw-PS-1xZ">
+                                <rect key="frame" x="46" y="107" width="228" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="5qN-PK-3bt"/>
-                                    <constraint firstAttribute="height" constant="30" id="nzj-hp-SWD"/>
+                                    <constraint firstAttribute="height" constant="81" id="MvC-Rf-hMR"/>
+                                    <constraint firstAttribute="width" constant="228" id="Yyx-2e-oEO"/>
                                 </constraints>
-                                <state key="normal" title="Get Random Quote">
-                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BH6-ry-A41">
+                                <rect key="frame" x="115" y="211" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="9pu-tB-fz7"/>
+                                    <constraint firstAttribute="height" constant="21" id="HrH-3X-3Km"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL9-FK-wU0">
+                                <rect key="frame" x="128" y="388" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ako-O0-Q5U"/>
+                                    <constraint firstAttribute="width" constant="65" id="ffW-nQ-aMQ"/>
+                                </constraints>
+                                <state key="normal" title="getQuote"/>
                                 <connections>
-                                    <action selector="getQuotePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgo-ms-30o"/>
+                                    <action selector="getQuotePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Umg-4r-itC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-Gb-dto">
-                                <rect key="frame" x="137" y="506" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="5Na-7c-le3"/>
-                                    <constraint firstAttribute="height" constant="30" id="bDG-xm-Eey"/>
-                                </constraints>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-Bi-pGq">
-                                <rect key="frame" x="95" y="461" width="131" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="J4u-Or-mC3"/>
-                                    <constraint firstAttribute="width" constant="131" id="OIs-Yu-IVG"/>
-                                </constraints>
-                                <state key="normal" title="Get Random Image">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxL-5a-04d">
-                                <rect key="frame" x="115" y="392" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjM-kA-z0f">
-                                <rect key="frame" x="122" y="363" width="76" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="PNK-AI-9Zo"/>
-                                    <constraint firstAttribute="height" constant="21" id="oeA-dS-lQj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-Yn-gmF">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hwh-Bi-pGq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Pf-rL-dje"/>
-                            <constraint firstItem="jmY-Gb-dto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6F3-Wc-7q6"/>
-                            <constraint firstItem="jmY-Gb-dto" firstAttribute="top" secondItem="hwh-Bi-pGq" secondAttribute="bottom" constant="15" id="Boo-gm-NAE"/>
-                            <constraint firstItem="hwh-Bi-pGq" firstAttribute="top" secondItem="gJF-hc-cFG" secondAttribute="bottom" constant="8" id="HJg-Fy-HHr"/>
-                            <constraint firstItem="dxL-5a-04d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Twx-dj-ywK"/>
-                            <constraint firstItem="gJF-hc-cFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2q-Z2-m7Y"/>
-                            <constraint firstItem="gJF-hc-cFG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="359" id="hJl-wE-I38"/>
-                            <constraint firstItem="sjM-kA-z0f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iH7-9X-m7c"/>
-                            <constraint firstItem="dxL-5a-04d" firstAttribute="top" secondItem="sjM-kA-z0f" secondAttribute="bottom" constant="8" id="o2h-OR-R91"/>
-                            <constraint firstItem="gJF-hc-cFG" firstAttribute="top" secondItem="dxL-5a-04d" secondAttribute="bottom" constant="10" id="qck-BG-AYf"/>
+                            <constraint firstItem="BH6-ry-A41" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0q9-ga-Ps7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XL9-FK-wU0" secondAttribute="bottom" constant="150" id="CWu-jo-RLV"/>
+                            <constraint firstItem="SdB-Yn-gmF" firstAttribute="top" secondItem="0qw-PS-1xZ" secondAttribute="bottom" constant="-124" id="Fya-RM-gGw"/>
+                            <constraint firstItem="XL9-FK-wU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JyX-DA-Aak"/>
+                            <constraint firstAttribute="trailing" secondItem="SdB-Yn-gmF" secondAttribute="trailing" id="QBz-i4-itC"/>
+                            <constraint firstItem="0qw-PS-1xZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ufw-aS-qJ3"/>
+                            <constraint firstItem="SdB-Yn-gmF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="X7T-Np-nwi"/>
+                            <constraint firstItem="BH6-ry-A41" firstAttribute="top" secondItem="0qw-PS-1xZ" secondAttribute="bottom" constant="23" id="cO4-fr-uuB"/>
+                            <constraint firstItem="SdB-Yn-gmF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ps7-6c-meq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SdB-Yn-gmF" secondAttribute="bottom" id="rer-xe-x3B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Quote Builder" id="nnn-CW-mhY"/>
                     <connections>
-                        <outlet property="quoteNameLabel" destination="dxL-5a-04d" id="Rlc-wN-1TO"/>
-                        <outlet property="quoteTextLabel" destination="sjM-kA-z0f" id="SKv-8q-2Nx"/>
+                        <outlet property="imageView" destination="SdB-Yn-gmF" id="39S-BE-bTi"/>
+                        <outlet property="quoteNameLabel" destination="BH6-ry-A41" id="sG7-xu-kjF"/>
+                        <outlet property="quoteTextLabel" destination="0qw-PS-1xZ" id="fYz-hg-KQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -134,10 +120,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="b4q-SR-rr7">
                             <connections>
                                 <action selector="addButtonPressed:" destination="dq0-4R-y8b" id="i4A-Id-KP8"/>
-                                <segue destination="BYZ-38-t0r" kind="push" identifier="addQuote" id="IkF-f8-Rb9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="addQuote" id="l5b-VB-gyl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wF-Mj-TDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
